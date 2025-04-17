@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>clona cartao</title>
+  <link rel="stylesheet" href="murilo.css">
+</head>
+<body>
+    <div class="glitter"></div>
+  <div id="particles-js"></div>
+ 
+  <h1>parabéns, seu viadinho!</h1>
+
+  <p>Toque em qualquer lugar da tela!</p>
+
+  <img src="./imagem-viado.jpg" alt="Murilo" class="bounce-photo">
+
+  <p class="text">Muitos anos de vida, espero que não faça nenhuma merda esse ano, com amor, sua irmã.</p>
+  <audio id="bg-audio" autoplay loop>
+    <source src="ssstik.io_1744916701290.mp3" type="audio/mp3">
+  </audio>
+
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="glitter-config.js"></script>
+  <script>
+    const audio = document.getElementById('bg-audio');
+    window.addEventListener('click', () => {
+      audio.play();
+    });
+  </script>
+</body>
+</html>

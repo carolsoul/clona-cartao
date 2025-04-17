@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(170deg, #ff0080, #ff8c00, #ffff00, #00ff00, #00ffff, #0000ff, #8000ff);
+  color: white;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  animation: rainbow 20s linear infinite;
+  overflow-x: hidden;
+}
+
+@keyframes rainbow {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.glitter {
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://media1.giphy.com/media/4fuFBNE9ASr2E/giphy.gif?cid=6c09b952dnm8ca0axfeeypxw639va16vir1vtov6coeamtyf&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g') repeat;
+  animation: glitter 10s linear infinite;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 100px;
+  text-shadow: 2px 2px #00000050;
+  position: relative;
+  z-index: 1;
+}
+
+p{
+  font-size: 25px;
+  text-shadow: 2px 2px #00000050;
+}
+
+.text{
+  font-size: 20px;
+}
+
+.bounce-photo {
+  width: 500px;
+  height: 1000px;
+  margin-top: 200px;
+  border-radius: 30px;
+  animation: bounce 1.2s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+}
+
+/* Animação de bounce - vai de um lado pro outro */
+@keyframes bounce {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(-80px) translateY(-100px); /* Move pra esquerda e sobe */
+  }
+  50% {
+    transform: translateX(0) translateY(0); /* Volta pro centro */
+  }
+  75% {
+    transform: translateX(80px) translateY(-100px); /* Move pra direita e sobe */
+  }
+  100% {
+    transform: translateX(0) translateY(0); /* Volta pro centro */
+  }
+}
+
+@keyframes glitter {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
